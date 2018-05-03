@@ -1,0 +1,49 @@
+Source: python-click
+Section: python
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Alexandre Viau <aviau@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-setuptools,
+Build-Depends-Indep: python-requests,
+                     python-colorama,
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/collab-maint/python-click.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/python-click.git
+Homepage: https://github.com/mitsuhiko/click
+
+Package: python-click
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-colorama
+Conflicts: python-click-cli
+Replaces: python-click-cli
+Description: Simple wrapper around optparse for powerful command line utilities - Python 2.7
+ Click is a Python package for creating beautiful command line interfaces
+ in a composable way with as little code as necessary.  It's the "Command
+ Line Interface Creation Kit".  It's highly configurable but comes with
+ sensible defaults out of the box.
+ .
+ It aims to make the process of writing command line tools quick and fun
+ while also preventing any frustration caused by the inability to implement
+ an intended CLI API.
+ .
+ This is the Python 2 compatible package.
+
+Package: python3-click
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-colorama
+Conflicts: python3-click-cli
+Replaces: python3-click-cli
+Description: Simple wrapper around optparse for powerful command line utilities - Python 3.x
+ Click is a Python package for creating beautiful command line interfaces
+ in a composable way with as little code as necessary.  It's the "Command
+ Line Interface Creation Kit".  It's highly configurable but comes with
+ sensible defaults out of the box.
+ .
+ It aims to make the process of writing command line tools quick and fun
+ while also preventing any frustration caused by the inability to implement
+ an intended CLI API.
+ .
+ This is the Python 3 compatible package.
+

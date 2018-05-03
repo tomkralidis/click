@@ -1,0 +1,53 @@
+python-click (6.7-1) unstable; urgency=medium
+
+  * Packaging for pygeoapi requirements.
+
+ -- Tom Kralidis <tomkralidis@gmail.com>  Thu, 03 May 2018 20:41:30 +0000
+
+python-click (6.2-2ubuntu1) xenial; urgency=medium
+
+  * Conflicts/Replaces python-click-cli/python3-click-cli; the
+    Ubuntu-specific "click" package has now renamed its binary package to
+    python3-click-package, so this package can reclaim its upstream name.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 11 Feb 2016 16:12:32 +0000
+
+python-click (6.2-2) unstable; urgency=medium
+
+  * Fixed locale detection error (Closes: #812713)
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 26 Jan 2016 09:33:30 -0500
+
+python-click (6.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * changed my email to @debian.org
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 17 Dec 2015 08:54:36 -0500
+
+python-click (5.1-1) unstable; urgency=low
+
+  *  New upstream release
+  *  Moved appropriate dependencies to Build-Depends-Indep
+  *  Re-licensed debian packaging to BSD
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Sat, 22 Aug 2015 21:10:55 -0400
+
+python-click (4.1-1) unstable; urgency=medium
+
+  * Upstream 4.1 release
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Thu, 16 Jul 2015 08:28:32 -0400
+
+python-click (3.3-2) unstable; urgency=low
+
+  * Set UTF-8 before building (Closes: #772605)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Tue, 09 Dec 2014 00:22:06 -0500
+
+python-click (3.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #764953)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Fri, 10 Oct 2014 12:56:09 -0400
+

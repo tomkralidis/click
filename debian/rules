@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+
+export PYBUILD_NAME=click
+export PYBUILD_TEST_PYTEST=1
+export PYBUILD_TEST_ARGS={dir}/tests/
+
+export SOURCE = $(CURDIR)/debian/
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_auto_configure:
+	dh_auto_configure
+	rm -rf artwork/.DS_STORE

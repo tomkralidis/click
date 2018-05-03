@@ -1,0 +1,22 @@
+Description: fixed locale detection error
+Origin: vendor
+Bug: 812713
+Author: Alexandre Viau <aviau@debian.org>
+Reviewed-by: Alexandre Viau <aviau@debian.org>
+Last-Update: 2016-01-26
+Applied-Upstream: https://github.com/mitsuhiko/click/commit/6bc3bf977a16d948841de17a6993ee11587b75b1
+
+--- a/click/_unicodefun.py
++++ b/click/_unicodefun.py
+@@ -64,6 +64,11 @@
+                               stderr=subprocess.PIPE).communicate()[0]
+         good_locales = set()
+         has_c_utf8 = False
++
++        # Make sure we're operating on text here.
++        if isinstance(rv, bytes):
++            rv = rv.decode('ascii', 'replace')
++
+         for line in rv.splitlines():
+             locale = line.strip()
+             if locale.lower().endswith(('.utf-8', '.utf8')):
